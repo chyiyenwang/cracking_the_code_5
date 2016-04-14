@@ -1,25 +1,26 @@
-function compression(string) {
+function compression(original) {
   var result = '';
   var count = 1;
 
-  for (var i = 0; i < string.length; i++) {
-    if (string[i] == string[i + 1]) {
+  for (var i = 0; i < original.length; i++) {
+    if (original[i] == original[i + 1]) {
       count++;
     }
     else {
-      result += string[i] + count
+      result += original[i] + count
       count = 1;
     }
   }
 
-  if (string.length < result.length) {
-    return string;
+  if (result.length < original.length) {
+    return result;
   }
   else {
-    return result;
+    return original;
   }
 };
 
 console.log(compression('aabcccccaaa'));
 console.log(compression('taco'))
 console.log(compression('a'));
+console.log(compression('aabb'));
