@@ -3,13 +3,13 @@ function unique(string) {
 
   for (var i = 0; i < string.length; i++) {
     if (obj[string[i]]) {
-      return 'not unique';
+      return false;
     }
     else {
       obj[string[i]] = 1;
     }
   };
-  return 'is unique';
+  return true;
 };
 
 console.log(unique('www'));
