@@ -3,7 +3,9 @@ function compression(original) {
   var count = 1;
 
   for (var i = 0; i < original.length; i++) {
-    if (original[i] == original[i + 1]) {
+    var nextChar = original[i + 1]
+    
+    if (original[i] == nextChar) {
       count++;
     }
     else {

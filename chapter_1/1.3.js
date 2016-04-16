@@ -1,16 +1,16 @@
-// Given two strings, write a method to decide 
-// if one is a permutation of the other
-
 function permutation(str1, str2) {
-  var words = {};
-  var temp = '';
+  var tempWord1 = str1.toLowerCase().split('').sort().toString();
+  var tempWord2 = str2.toLowerCase().split('').sort().toString();
 
-  for (var i = 0; i < str1.length; i++) {
-    str1
+  if (tempWord1 == tempWord2) {
+    return true;
   }
-  return words;
+  else {
+    return false;
+  };
 };
 
 console.log(permutation('abc', 'bac'));
-// abc acb bac bca cab cba
 console.log(permutation('taco', 'bell'));
+console.log(permutation('aa', 'bb'));
+console.log(permutation('aab', 'aaba'));
